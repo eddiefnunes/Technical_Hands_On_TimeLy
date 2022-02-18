@@ -19,7 +19,7 @@
   "cy:open": "cypress open",
   
     
-  "headless": "cypress run"
+  "npm test": "cypress run"
   
   },
   
