@@ -1,11 +1,29 @@
 {
+  
+  "version": "1.0.0",
+  
+  "description": "",
+  
+  "main": "index.js",
+  
   "dependencies": {
-    "cypress": "^9.5.0"
+  
+    
+  "cypress": "9.5.0"
+  
   },
+  
   "scripts": {
-    "cy:open": "cypress open",   
-    "cy:runlocal": "cypress run"
+  
+    
+  "cy:open": "cypress open",
+  
+    
+  "headless": "cypress run"
+  
   },
+  
   "author": "Edmar Nunes -edmarfnunes@gmail.com",
+  
   "license": "MIT"
 }

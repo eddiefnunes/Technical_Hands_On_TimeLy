@@ -1,9 +1,6 @@
 {
-    "baseUrl":"http://urano-stg.sac.b2w.io",
-    "defaultCommandTimeout":30000,
-    "requestTimeout":12000,    
-    "experimentalStudio": true,   
-    "viewportHeight": 1200,
-    "viewportWidth": 1200
+    "baseUrl":"https://app.dev.time.ly" 
+   
+    
     
 }

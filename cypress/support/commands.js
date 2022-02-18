@@ -1,25 +1,29 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+const el = require('./elementos').ELEMENTS
+
+Cypress.Commands.add('login', () => {
+
+    const username  = Cypress.env('USER_NAME')
+    const password = Cypress.env('USER_PASSWORD')  
+    
+      cy.visit('/login')
+      cy.get(el.txtEmail).type(username)
+      cy.get(el.txtPass).type(password,{ log: false })
+      cy.get(el.btnLogin).click()
+     
+    
+  })
+
+
+  Cypress.Commands.add('elementosVisiveis', () => {
+
+    cy.get(el.cardHead).should('be.visible')
+    cy.get(el.checkBox).should('be.visible')   
+    cy.get(el.cardFooter).should('be.visible')
+    cy.get(el.linkForgotPass).should('be.visible')
+    cy.get(el.txtEmail).should('be.visible')
+    cy.get(el.txtPass).should('be.visible')
+    cy.get(el.btnLogin).should('be.visible')
+    
+  })
+
+  
