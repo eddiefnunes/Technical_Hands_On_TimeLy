@@ -16,5 +16,5 @@ jobs:
       - name: Run headless tests
         uses: cypress-io/github-action@v2        
         with:
-          command: npm headless
+          command: "cypress run"
  
